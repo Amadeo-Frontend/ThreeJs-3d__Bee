@@ -18,7 +18,7 @@ loader.load('/honey_bee.glb',
     function (gltf) {
         bee = gltf.scene;
         scene.add(bee);
-
+        bee.scale.set(0.5, 0.5, 0.5);
         mixer = new THREE.AnimationMixer(bee);
         mixer.clipAction(gltf.animations[0]).play();
         modelMove();
